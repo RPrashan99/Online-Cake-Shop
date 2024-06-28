@@ -47,7 +47,7 @@ export default function DesignsPage() {
 
           </div>
           <div className={classes.content}>
-             Welcome to MD Cakes!
+             Welcome to Md Cakes!
           </div>
 
         </div>
