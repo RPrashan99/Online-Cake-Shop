@@ -26,7 +26,7 @@ const ReadMoreReadLess = () =>{
                             products we sell, MD Cakes carries everything
                             you could possibly imagine and more. We're here
                             for our customers, and want each one of them to 
-                            have an unique, one of kind experience at our 
+                            have an unique, one of a kind experience at our 
                             amazing Cake Shop. 
                             {showMore && (
                                 <>
