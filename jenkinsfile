@@ -1,0 +1,56 @@
+pipeline {
+ agent any
+ 
+ stages {
+    stage('SCM Checkout') {
+        steps {
+            retry(3) {
+                git branch: 'main', url: 'https://github.com/RPrashan99/Online-Cake-Shop.git'
+            }
+        }
+    }
+    stage('Docker Frontend Image Build') {
+        steps {
+            script{
+                dir('frontend'){
+                    bat 'docker build -t rashmithadocker/cakefront .'
+                }
+            }
+        }
+    }
+    stage('Docker Backend Image Build') {
+        steps {
+            script{
+                dir('backend'){
+                    bat 'docker build -t rashmithadocker/cakeback .'
+                }
+            }
+        }
+    }
+    stage('Docker Hub Login') {
+        steps {
+            withCredentials([string(credentialsId: 'rashmithaDockerPassword', variable: 'rashmithaDockerPassword')]) {
+                script {
+                    bat """
+                    docker login -u rashmithadocker -p %rashmithaDockerPassword%
+                    """
+                }
+            }
+        }
+    }
+    stage('Push Image') {
+        steps {
+            bat "docker push rashmithadocker/cakeback"
+            bat "docker push rashmithadocker/cakefront"
+        }
+    }
+ }
+post {
+    always {
+        script{
+            bat 'docker logout'
+        }
+        cleanWs()
+    }
+ }
+}
