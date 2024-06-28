@@ -20,7 +20,7 @@ const ReadMoreReadLess = () =>{
                     </div>
                      <div >
                         <div className={classes.p}> 
-                            At MD Cakes, it's our mission to bring you the 
+                            At MD Cakes, it is our mission to bring you the 
                             largest selction of quality cakes on the market.
                             Along with a vast wealth of knowledge in the 
                             products we sell, MD Cakes carries everything
