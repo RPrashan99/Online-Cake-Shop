@@ -16,7 +16,7 @@ const ReadMoreReadLess = () =>{
             <div className={classes.bg}>     
                 <div className={classes.about}>
                     <div className={classes.topic}>
-                        Delicious Cakes<br></br> for Everyone
+                        Marvelous & Delicious Cakes<br></br> for Everyone
                     </div>
                      <div >
                         <div className={classes.p}> 
