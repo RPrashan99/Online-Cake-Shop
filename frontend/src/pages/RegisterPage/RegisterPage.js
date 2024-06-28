@@ -16,10 +16,11 @@ export default function RegisterPage() {
   const returnUrl = params.get('returnUrl');
 
   useEffect (() => {
-    if (!user) return;
-    returnUrl ? navigate(returnUrl) : navigate('/');
+    if (user){
+      returnUrl ? navigate(returnUrl) : navigate('/');
+    }
 
-  },[user]);
+  },[user, returnUrl, navigate]);
 
   const {
     handleSubmit,

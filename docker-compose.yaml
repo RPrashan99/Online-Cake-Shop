@@ -1,0 +1,27 @@
+version: 'v01'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongodata
+    
+  backend:
+    build: ./backend
+    container_name: cakeback
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb+srv://mashawijesekara:n5AGT6RQWik5U33Z@cluster0.tjxwt5d.mongodb.net/MDCakeShop?ssl=true&connectTimeoutMS=30000
+      - JWT_SECRET=AbholkcnjklHuexw496434178@897
+
+  frontend:
+    build: ./frontend
+    container_name: cakefront
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+    depends_on:
+      - backend

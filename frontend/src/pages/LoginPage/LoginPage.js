@@ -20,8 +20,9 @@ export default function LoginPage() {
   
   
   useEffect(() =>{
-    if(!user) return;
-    returnUrl? navigate(returnUrl): navigate('/');
+    if(user){
+      returnUrl? navigate(returnUrl): navigate('/');
+    }
   },[user]
   );
 

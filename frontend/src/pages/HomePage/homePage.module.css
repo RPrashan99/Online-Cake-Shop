@@ -23,7 +23,7 @@
     flex-wrap:wrap;
     padding: 1%;
     font-style: italic;
-    justify-content: start;
+    justify-content: flex-start;
     font-weight: bold;
     position: relative;
     overflow: hidden;
@@ -46,7 +46,7 @@
     margin: 1rem;
     text-align: justify;
     width: 60%;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .include{
