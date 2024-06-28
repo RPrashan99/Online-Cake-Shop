@@ -24,7 +24,7 @@ const ReadMoreReadLess = () =>{
                             largest selction of quality cakes on the market.
                             Along with a vast wealth of knowledge in the 
                             products we sell, MD Cakes carries everything
-                             you could possibly imagine and more. We're here
+                            you could possibly imagine and more. We're here
                             for our customers, and want each one of them to 
                             have a unique, one of a kind experience at our 
                             amazing Cake Shop. 
