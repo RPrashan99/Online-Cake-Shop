@@ -25,7 +25,7 @@ const ReadMoreReadLess = () =>{
                             Along with a vast wealth of knowledge in the 
                             products we sell, MD Cakes carries everything
                             you could possibly imagine and more. We're here
-                            for our customers, and want each one of them to 
+                            for our customers, and want each one of them to
                             have an unique, one of a kind experience at our 
                             amazing Cake Shop. 
                             {showMore && (
